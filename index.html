@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faiza Gull — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas particles -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top navigation -->
+  <header class="nav" id="siteNav">
+    <div class="nav-inner container">
+      <a class="brand" href="#about">Faiza Gull</a>
+      <nav class="links" role="navigation" aria-label="Main Navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" hidden>☰</button>
+    </div>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section id="about" class="hero-section section-full">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <div class="photo-ring">
+          <div class="photo">
+            <!-- Replace the placeholder with your image file or URL -->
+            <img id="profilePhoto" src="faiza.jpg" alt="Faiza Gull photo">
+          </div>
+          <svg class="ring-decor" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="90" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <h1 class="title">
+          <span id="typed-line" aria-hidden="true"></span><span class="caret">|</span>
+        </h1>
+        <p class="subtitle">Computer Science • Applied AI & Full-Stack • Compiler construction (MLIR)</p>
+
+        <div class="summary card">
+          <p>
+            Detail-oriented Computer Science student at Punjab University (GPA 3.61) with hands-on experience
+            in full-stack development and applied machine learning. Built projects including an AI Research Assistant (RAG + LLMs),
+            Seq2Seq translator, and a computer-vision foot-size estimator. I turn research & prototypes into production-ready tools.
+          </p>
+          <p class="meta">
+            Sheikhupura, Pakistan •
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-hint" href="#skills" aria-label="Scroll to skills">↓</a>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid card big">
+        <div class="skill-block">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h3>Frameworks & Libraries</h3>
+          <ul>
+            <li>Hugging Face</li>
+            <li>AutoGen</li>
+            <li>PyTorch</li>
+            <li>Scikit-learn</li>
+            <li>LangChain</li>
+            <li>Large Language Models</li>
+            <li>Flask</li>
+            <li>Node.js</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h3>Databases</h3>
+          <ul>
+            <li>SQL</li>
+            <li>MongoDB</li>
+            <li>Chroma</li>
+            <li>Pinecone</li>
+            <li>PostgreSQL</li>
+            <li>Cassandra</li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h3>Tools & Platforms</h3>
+          <ul>
+            <li>Docker</li>
+            <li>GitHub</li>
+            <li>Streamlit</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+
+        <div class="skill-block full">
+          <h3>Courses</h3>
+          <ul class="columns">
+            <li>Probability and Statistics</li>
+            <li>Linear Algebra</li>
+            <li>Calculus</li>
+            <li>Computer Vision</li>
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Database Management System</li>
+            <li>Design and Analysis of Algorithms</li>
+            <li>Computer Networks</li>
+            <li>Operating System</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS carousel (text-only, infinite loop) -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev" aria-label="Previous">‹</button>
+
+        <div class="carousel-viewport">
+          <div class="carousel" id="carousel">
+            <!-- we'll clone items for looping -->
+            <article class="project card">
+              <h3>AutoNN</h3>
+              <p>Full-stack app that auto-generates, preprocesses, and trains ML models using LangChain & OpenAI APIs. Dataset pipelines, model evaluation UI.</p>
+              <p class="tags">React · Node · LangChain · ML</p>
+            </article>
+
+            <article class="project card">
+              <h3>English → French Translator</h3>
+              <p>Seq2Seq Transformer implemented with PyTorch for English–French translation using attention-based decoding.</p>
+              <p class="tags">PyTorch · NLP · Transformers</p>
+            </article>
+
+            <article class="project card">
+              <h3>AI Image Generator</h3>
+              <p>Stable Diffusion pipeline with CLIP-based prompt-image scoring to optimize prompt engineering and output quality.</p>
+              <p class="tags">Diffusion · CLIP · Python</p>
+            </article>
+                 <article class="project card">
+        <h3>Marks Calculation System</h3>
+        <p>Automates result generation from raw student data with report creation and performance analysis using YOLO.</p>
+        <p class="tags">Python · YOLO · Data Analysis</p>
+      </article>
+
+      <article class="project card">
+        <h3>Text Recognition System</h3>
+        <p>Recognizes printed or handwritten text using a convolutional neural network (CNN) model trained on labeled image data with PyTorch.</p>
+        <p class="tags">Python · PyTorch · CNN</p>
+      </article>
+
+      <article class="project card">
+        <h3>Twitter Sentiment Analysis</h3>
+        <p>Analyzes tweet sentiments using LSTM RNN for classification into positive, negative, or neutral.</p>
+        <p class="tags">Python · LSTM · NLP</p>
+      </article>
+
+      <article class="project card">
+        <h3>AI Research Assistant</h3>
+        <p>Helps streamline and accelerate research by retrieving, summarizing, and analyzing academic literature using RAG and large language models.</p>
+        <p class="tags">Python · LangChain · RAG · LLM</p>
+      </article>
+
+      <article class="project card">
+        <h3>Community Service & Issue Reporting Platform</h3>
+        <p>A platform built with Python & Flask, featuring sentiment analysis for feedback and a community discussion portal for engagement and problem-solving.</p>
+        <p class="tags">Python · Flask · Sentiment Analysis</p>
+      </article>
+           
+          </div>
+        </div>
+
+        <button class="carousel-arrow next" aria-label="Next">›</button>
+      </div>
+
+      <div class="carousel-indicators" id="indicators" aria-hidden="false"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item card">
+          <h4>DevelopersHub Coorporation — Full stack engineer intern</h4>
+          <p class="muted">Jul 2024 - Jan 2025</p>
+          <p>
+            I contributed to the design, development, and testing of scalable web-based applications in a collaborative team environment. I worked closely with senior developers to implement new features, debug code, and optimize system performance using languages such as Java, Python, and JavaScript.
+            I gained hands-on experience with version control systems like Git, agile development practices, and tools such as Docker, Postman, and RESTful APIs. Throughout the internship, I enhanced my problem-solving skills, learned industry best practices, and actively participated in code reviews, daily stand-ups, and sprint planning meetings. This experience solidified my foundation in full-stack development and strengthened my ability to work effectively in a fast-paced, team-oriented setting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-icons">
+      <!-- Email -->
+      <a href="mailto:gull.faiza22@example.com" title="Email" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></p>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/faiza-gull-9b1016275/" title="LinkedIn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/faiza22-byte" title="GitHub" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <!-- LeetCode -->
+      <a href="https://leetcode.com/u/faizagull/" title="LeetCode" target="_blank">
+        <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Faiza Gull </p>
+    </div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
